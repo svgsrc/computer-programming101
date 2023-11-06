@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+/**
+ * @since 19.10.2022
+ * @author Sevgi SARICA
+ *
+ */
+
+public class BreadStore_20190808066 {
+    public static void main(String[] args) {
+        System.out.println("****Bread Store Inventory****");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of bread we have:");
+        int bread = input.nextInt();
+        if (bread < 0) {
+            System.err.println("ERROR:Bread number cannot be negative.");
+        } else {
+            System.out.print("Enter the cost of bread:");
+            double cost = input.nextDouble();
+            if (cost < 0) {
+                System.err.println("ERROR:Cost can not be negative.");
+            } else {
+                System.out.println("****Customer User Interface****");
+                String welcome = "Welcome to our bread store.We have " + bread
+                        + " loaves of bread available.How many would your like? ";
+                System.out.print(welcome);
+                int csbread = input.nextInt();
+                if (csbread <= 0) {
+                    System.err.println("ERROR:Value cannot be negative.");
+                } else if (csbread > bread) {
+                    System.err.println("ERROR:We don't have that many remaining.");
+                } else {
+                    double total = cost * csbread;
+                    System.out.println("Your cost is " + total);
+                    String goodbye = "Thank you for shopping with us today.";
+                    System.out.println(goodbye);
+                    int remainder=bread-csbread;
+                    System.out.println("we now have " + remainder + " loaves of bread remaining.");
+                }
+
+            }
+        }
+
+    }
+
+}
