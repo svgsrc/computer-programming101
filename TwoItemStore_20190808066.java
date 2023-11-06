@@ -1,4 +1,4 @@
-package CSE101Assignments.Assignment2;
+
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class TwoItemStore_20190808066 {
         if (numOfProduct1 < 0) {
             System.out.println("ERROR:Value cannot be negative. Exiting.");
         } else {
-            System.out.print("PLease enter the cost of " + product1 +" : ");
+            System.out.print("Please enter the cost of " + product1 +" : ");
             double costProduct1 = input.nextDouble();
             if (costProduct1 < 0) {
                 System.out.println("ERROR:Value cannot be negative. Exiting.");
